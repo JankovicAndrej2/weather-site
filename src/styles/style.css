@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "oxaniumregular";
+    src: url("../fonts/oxanium-regular-webfont.woff2") format("woff2"),
+        url("../fonts/oxanium-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: "oxaniumregular";
+}
+
 html,
 body {
     height: 100%;
@@ -20,7 +31,9 @@ body {
 .top {
     height: 70%;
     width: 100%;
+    display: flex;
 }
+
 .bottom {
     height: 30%;
     width: 100%;
@@ -35,4 +48,39 @@ body {
     border-radius: 10px;
     height: 200px;
     width: 150px;
+}
+.left,
+.right {
+    height: 100%;
+    width: 30%;
+    display: flex;
+}
+
+.left {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.right {
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.search-bar {
+    border: 1px solid rgb(255, 255, 255);
+    height: 40px;
+    width: 400px;
+}
+.today {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 200px;
+    width: 150px;
+}
+.city {
+    border: 1px solid rgb(255, 255, 255);
+
+    height: 300px;
+    width: 900px;
 }
