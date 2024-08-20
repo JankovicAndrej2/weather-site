@@ -7,6 +7,7 @@
 }
 * {
     font-family: "oxaniumregular";
+    color: #ede9ce;
 }
 
 html,
@@ -39,15 +40,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 60px;
 }
 
 .bottom > * {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
-    height: 200px;
-    width: 150px;
+    height: 250px;
+    width: 200px;
 }
 .left,
 .right {
@@ -109,4 +110,127 @@ input:focus-visible {
         brightness(103%) contrast(101%);
     fill: white;
     cursor: pointer;
+}
+.day {
+    display: flex;
+    justify-content: center;
+}
+
+.day-name {
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+.error-box {
+    height: 100px;
+    width: 300px;
+    border: 1px solid black;
+    position: absolute;
+    top: calc(50% - 51px);
+    left: calc(50% - 151px);
+    background-color: white;
+}
+
+.error-box {
+    padding: 30px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+.text-box {
+    font-size: 1.3rem;
+}
+.close-button {
+    cursor: pointer;
+}
+.day > * {
+    color: white;
+}
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.box-1 {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    color: #ede9ce;
+}
+.weather-icon {
+    height: 50px;
+}
+.left-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.box-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.min-temp,
+.max-temp {
+    display: flex;
+    gap: 10px;
+}
+.thermo {
+    height: 30px;
+}
+.up-text {
+    font-size: 1.6rem;
+}
+.min-temp > .thermo {
+    height: 20px;
+    padding-left: 3px;
+}
+.up-text,
+.down-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+}
+.moon-phase,
+.pressure {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-around;
+}
+.moon-phase > img,
+.pressure > img {
+    height: 35px;
+}
+
+.box-4 {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.rain-chance > img,
+.wind-speed > img {
+    height: 30px;
+}
+.box-4 > * {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2rem;
+}
+.thermo,
+.moon-shape,
+.arrow,
+.wind,
+.proce {
+    filter: invert(88%) sepia(18%) saturate(252%) hue-rotate(9deg)
+        brightness(107%) contrast(86%);
 }
