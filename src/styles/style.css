@@ -45,7 +45,6 @@ body {
 }
 
 .bottom > * {
-    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     height: 250px;
     width: 200px;
@@ -162,7 +161,7 @@ input:focus-visible {
     color: #ede9ce;
 }
 .weather-icon {
-    height: 50px;
+    height: 40px;
 }
 .left-2 {
     display: flex;

@@ -3,7 +3,7 @@ let maxTemp = document.querySelectorAll(".up-text");
 let minTemp = document.querySelectorAll(".down-text");
 let moonShape = document.querySelectorAll(".moon-shape");
 let pressureText = document.querySelectorAll(".pressure-text");
-
+let weatherIcon = document.querySelectorAll(".weather-icon");
 let chanceOfRain = document.querySelectorAll(".chance");
 let speedOfWind = document.querySelectorAll(".speed");
 
@@ -79,5 +79,8 @@ export function DOMChange(data) {
         pressureText[i - 1].innerHTML = data.days[i].pressure + " hPa";
         chanceOfRain[i - 1].innerHTML = data.days[i].humidity + "%";
         speedOfWind[i - 1].innerHTML = data.days[i].windspeed + "km/h";
+
+        weatherIcon[i - 1].src =
+            "../images/icons/weather-icons/" + data.days[i].icon + ".svg";
     }
 }
