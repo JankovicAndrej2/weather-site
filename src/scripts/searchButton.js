@@ -2,12 +2,31 @@ let searchIcon = document.querySelector(".search-icon");
 let input = document.querySelector("#city");
 let errorBox = document.querySelector(".error-box");
 
+import { DOMChange } from "./DOMChange.js";
+
+//default fetch Osijek
+fetchCityData("osijek").then(function (result) {
+    if (result != undefined) {
+        //city is ok, continue
+        DOMChange(result);
+
+        input.value = "";
+    } else {
+        //city input is invalid, open box
+        errorBox.style.display = "flex";
+        //disable keyboard
+        document.onkeydown = function (e) {
+            return false;
+        };
+    }
+});
+
 searchIcon.addEventListener("click", () => {
     if (input.value != "") {
         fetchCityData(input.value).then(function (result) {
             if (result != undefined) {
                 //city is ok, continue
-                console.log(result);
+                DOMChange(result);
                 input.value = "";
             } else {
                 //city input is invalid, open box
