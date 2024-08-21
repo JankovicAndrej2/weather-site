@@ -2,6 +2,10 @@ let box1 = document.querySelectorAll(".box-1");
 let maxTemp = document.querySelectorAll(".up-text");
 let minTemp = document.querySelectorAll(".down-text");
 let moonShape = document.querySelectorAll(".moon-shape");
+let pressureText = document.querySelectorAll(".pressure-text");
+
+let chanceOfRain = document.querySelectorAll(".chance");
+let speedOfWind = document.querySelectorAll(".speed");
 
 export function DOMChange(data) {
     console.log(data);
@@ -71,5 +75,9 @@ export function DOMChange(data) {
                     "../images/icons/moon-shapes/moon-waning-crescent.svg";
                 break;
         }
+
+        pressureText[i - 1].innerHTML = data.days[i].pressure + " hPa";
+        chanceOfRain[i - 1].innerHTML = data.days[i].humidity + "%";
+        speedOfWind[i - 1].innerHTML = data.days[i].windspeed + "km/h";
     }
 }
