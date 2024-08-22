@@ -75,10 +75,9 @@ body {
     gap: 10px;
 }
 .today {
-    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
-    height: 200px;
-    width: 150px;
+    height: 250px;
+    width: 200px;
 }
 .city {
     border: 1px solid rgb(255, 255, 255);
@@ -145,59 +144,71 @@ input:focus-visible {
 .close-button {
     cursor: pointer;
 }
-.day > * {
+.day > * .today > * {
     color: white;
 }
-.day {
+.day,
+.today {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
 }
 
-.box-1 {
+.box-1 .today-box-1 {
     font-size: 1.5rem;
     padding-top: 5px;
     color: #ede9ce;
 }
-.weather-icon {
+.weather-icon,
+.today-weather-icon {
     height: 40px;
 }
-.left-2 {
+.left-2,
+.today-left-2 {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
-.box-2 {
+.box-2,
+.today-box-2 {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
 .min-temp,
-.max-temp {
+.max-temp,
+.today-max-temp,
+.today-min-temp {
     display: flex;
     gap: 10px;
 }
 .thermo {
     height: 30px;
 }
-.up-text {
+.up-text,
+.today-up-text {
     font-size: 1.6rem;
 }
-.min-temp > .thermo {
+.min-temp > .thermo,
+.today-min-temp > .thermo {
     height: 20px;
     padding-left: 3px;
 }
 .up-text,
-.down-text {
+.down-text,
+.today-up-text,
+.today-down-text {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 3px;
 }
 .moon-phase,
-.pressure {
+.pressure,
+.today-moon-phase,
+.today-pressure {
     display: flex;
     align-items: center;
     margin-top: 5px;
@@ -206,20 +217,25 @@ input:focus-visible {
     justify-content: space-around;
 }
 .moon-phase > img,
-.pressure > img {
+.pressure > img,
+.today-moon-phase > img,
+.today-pressure > img {
     height: 35px;
 }
 
-.box-4 {
+.box-4 .today-box-4 {
     margin-top: 20px;
     display: flex;
     gap: 15px;
 }
 .rain-chance > img,
-.wind-speed > img {
+.wind-speed > img,
+.today-rain-chance > img,
+.today-wind-speed > img {
     height: 30px;
 }
-.box-4 > * {
+.box-4 > *,
+.today-box-4 > * {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -227,6 +243,7 @@ input:focus-visible {
 }
 .thermo,
 .moon-shape,
+.today-moon-shape,
 .arrow,
 .wind,
 .proce {
