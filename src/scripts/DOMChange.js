@@ -83,6 +83,56 @@ export function DOMChange(data) {
         weatherIcon[i - 1].src =
             "../images/icons/weather-icons/" + data.days[i].icon + ".svg";
     }
-    let currentCity = document.querySelector(".current-city");
-    currentCity.innerHTML = data.resolvedAddress;
+
+    //current day data
+    document.querySelector(".current-city").innerHTML = data.resolvedAddress;
+
+    document.querySelector(".today-up-text").innerHTML =
+        data.currentConditions.temp + " °C";
+
+    let currentMoonChange = data.currentConditions.moonphase;
+    let todayMoon = document.querySelector(".today-moon-shape");
+    switch (true) {
+        case currentMoonChange == 0:
+            todayMoon.src = "../images/icons/moon-shapes/moon-new.svg";
+            break;
+        case currentMoonChange < 0.25:
+            todayMoon.src =
+                "../images/icons/moon-shapes/moon-waxing-crescent.svg";
+            break;
+        case currentMoonChange == 0.25:
+            todayMoon.src =
+                "../images/icons/moon-shapes/moon-first-quarter.svg";
+            break;
+        case currentMoonChange < 0.5:
+            todayMoon.src =
+                "../images/icons/moon-shapes/moon-waxing-gibbous.svg";
+            break;
+        case currentMoonChange == 0.5:
+            todayMoon.src = "../images/icons/moon-shapes/moon-full.svg";
+            break;
+        case currentMoonChange < 0.75:
+            todayMoon.src =
+                "../images/icons/moon-shapes/moon-waning-gibbous.svg";
+            break;
+        case currentMoonChange == 0.75:
+            todayMoon.src = "../images/icons/moon-shapes/moon-last-quarter.svg";
+            break;
+        case currentMoonChange < 1:
+            todayMoon.src =
+                "../images/icons/moon-shapes/moon-waning-crescent.svg";
+            break;
+    }
+
+    document.querySelector(".today-pressure-text").innerHTML =
+        data.currentConditions.pressure + " hPA";
+
+    document.querySelector(".today-chance").innerHTML =
+        data.currentConditions.humidity + "%";
+
+    document.querySelector(".today-speed").innerHTML =
+        data.currentConditions.windspeed + "km/h";
+
+    document.querySelector(".today-weather-icon").src =
+        "../images/icons/weather-icons/" + data.currentConditions.icon + ".svg";
 }
