@@ -83,4 +83,6 @@ export function DOMChange(data) {
         weatherIcon[i - 1].src =
             "../images/icons/weather-icons/" + data.days[i].icon + ".svg";
     }
+    let currentCity = document.querySelector(".current-city");
+    currentCity.innerHTML = data.resolvedAddress;
 }
