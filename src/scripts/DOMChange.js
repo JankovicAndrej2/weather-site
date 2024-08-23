@@ -136,6 +136,8 @@ export function DOMChange(data) {
     document.querySelector(".today-weather-icon").src =
         "../images/icons/weather-icons/" + data.currentConditions.icon + ".svg";
 
+    let clean = document.querySelector("#map");
+    clean.innerHTML = "";
     maptilersdk.config.apiKey = "lXx3JZOCTnjVRIPNjp8W";
     const map = new maptilersdk.Map({
         container: "map", // container's id or the HTML element to render the map
