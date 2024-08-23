@@ -145,6 +145,7 @@ export function DOMChange(data) {
         center: [data.longitude, data.latitude], // starting position [lng, lat]
         zoom: 3, // starting zoom
     });
+
     var city = new maptilersdk.Marker()
         .setLngLat([data.longitude, data.latitude])
         .addTo(map);
