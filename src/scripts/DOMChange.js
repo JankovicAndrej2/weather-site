@@ -135,4 +135,15 @@ export function DOMChange(data) {
 
     document.querySelector(".today-weather-icon").src =
         "../images/icons/weather-icons/" + data.currentConditions.icon + ".svg";
+
+    maptilersdk.config.apiKey = "lXx3JZOCTnjVRIPNjp8W";
+    const map = new maptilersdk.Map({
+        container: "map", // container's id or the HTML element to render the map
+        style: "streets-v2",
+        center: [data.longitude, data.latitude], // starting position [lng, lat]
+        zoom: 3, // starting zoom
+    });
+    var city = new maptilersdk.Marker()
+        .setLngLat([data.longitude, data.latitude])
+        .addTo(map);
 }
