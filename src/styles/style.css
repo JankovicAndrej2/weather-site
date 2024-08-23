@@ -266,3 +266,6 @@ a {
 .error-box > * {
     color: black;
 }
+* {
+    user-select: none;
+}
